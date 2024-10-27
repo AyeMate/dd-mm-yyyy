@@ -1,3 +1,3 @@
-FROM busybox:latest
+FROM nginx:alpine
 
-COPY index.html /var/www
+COPY index.html /usr/share/nginx/html
