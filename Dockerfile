@@ -1,4 +1,3 @@
 FROM nginx:alpine
 
-COPY index.html /usr/share/nginx/html
-COPY main.js /usr/share/ngnix/html
+COPY public /usr/share/nginx/html
