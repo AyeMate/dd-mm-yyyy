@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>dd-mm-yyyy</title>
     <meta charset="UTF-8">
-</head>
-<body>
+    <style>
+        body {
+            background-color: #2b2d30;
+            color: #ffffff;
+        }
+    </style>
     <script>
         function updateDate() {
             const now = new Date();
@@ -15,6 +20,8 @@
         setInterval(updateDate, 1000);
         updateDate();
     </script>
-    <div id="date"></div>
-</body>
+</head>
+    <body>
+        <div id="date"></div>
+    </body>
 </html>
