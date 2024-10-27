@@ -11,13 +11,13 @@ primary_region = "iad"
     auto_start_machines = true
     min_machines_running = 0
 
-[[services.ports]]
-    handlers = ["http"]
-    port = 80
+    [[services.ports]]
+        handlers = ["http"]
+        port = 80
 
-[[services.ports]]
-    handlers = ["tls", "http"]
-    port = 443
+    [[services.ports]]
+        handlers = ["tls", "http"]
+        port = 443
 
     [services.http_options.response.headers]
         Content-Security-Policy = "default-src 'none'; upgrade-insecure-requests; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https:; font-src 'self'; connect-src 'self' https:; form-action 'self'; base-uri 'self'; frame-ancestors 'none'"
