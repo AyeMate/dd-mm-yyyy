@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 RUN cargo build --release
 
-FROM alpine:3.20.3
+FROM debian:bookworm-slim
 WORKDIR /app
 COPY --from=builder /app/target/release/dd-mm-yyyy .
 EXPOSE 8080
