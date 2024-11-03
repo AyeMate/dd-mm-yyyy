@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 RUN cargo build --release
 
-FROM debian:bookworm-slim
+FROM scratch
 WORKDIR /app
 COPY --from=builder /app/target/release/dd-mm-yyyy .
 EXPOSE 8080
