@@ -11,14 +11,6 @@ primary_region = "iad"
     auto_start_machines = true
     min_machines_running = 0
 
-    [http_service.ports]
-        handlers = ["http"]
-        port = 80
-
-    [http_service.ports]
-        handlers = ["tls", "http"]
-        port = 443
-
     [http_service.http_options.response.headers]
         Content-Security-Policy = "default-src 'none'; style-src 'unsafe-inline'; frame-ancestors 'none'"
         X-Frame-Options = "DENY"
