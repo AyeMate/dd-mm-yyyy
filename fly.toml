@@ -18,7 +18,6 @@ primary_region = "iad"
     [[services.ports]]
         handlers = ["tls", "http"]
         port = 443
-        tls_options = { "alpn" = ["h2", "http/1.1"], "versions" = ["TLSv1.2", "TLSv1.3"] }
 
         [services.ports.http_options.response.headers]
             Content-Security-Policy = "default-src 'none'; style-src 'unsafe-inline'; frame-ancestors 'none'"
