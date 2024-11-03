@@ -4,11 +4,15 @@ use chrono::{Datelike, Local};
 async fn index() -> HttpResponse {
     let now = Local::now();
     let html = format!(
-        r#"<!DOCTYPE html>
+        r#"
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>dd-mm-yyyy</title>
+    <meta name="description" content="dd-mm-yyyy" />
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
     <style>
         body {{
             background-color: #2b2d30;
@@ -17,9 +21,11 @@ async fn index() -> HttpResponse {
     </style>
 </head>
 <body>
-    <div id="date">{:02}.{:02}.{}</div>
+    <div>{:02}.{:02}.{}</div>
 </body>
-</html>"#,
+</html>
+
+        "#,
         now.day(),
         now.month(),
         now.year()
